@@ -1,0 +1,20 @@
+@import "navFooterStyle.css";
+@import "contentStyle.css";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 400;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+  min-height: 676px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Color Palette */
+/* #e8505b, #f9d56e, #f3ecc2, #14b1ab */
+/* #f6f4f6, #fddb3a, #52575d, #414444b */
+/* #00b8a9, #f8f3d4, #f6416c, #ffde7d */

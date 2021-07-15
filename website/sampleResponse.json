@@ -1,0 +1,41 @@
+{
+  "coord": {
+    "lon": -73.5435,
+    "lat": 41.0888
+  },
+  "weather": [{
+    "id": 801,
+    "main": "Clouds",
+    "description": "few clouds",
+    "icon": "02n"
+  }],
+  "base": "stations",
+  "main": {
+    "temp": 80.26,
+    "feels_like": 84.49,
+    "temp_min": 72.34,
+    "temp_max": 87.13,
+    "pressure": 1012,
+    "humidity": 78
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 4.61,
+    "deg": 160
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1625704373,
+  "sys": {
+    "type": 2,
+    "id": 2003917,
+    "country": "US",
+    "sunrise": 1625650135,
+    "sunset": 1625704137
+  },
+  "timezone": -14400,
+  "id": 0,
+  "name": "Stamford",
+  "cod": 200
+}
