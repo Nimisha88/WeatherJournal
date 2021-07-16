@@ -21,9 +21,8 @@ const fetch = require('node-fetch'); // Include fetch
 const app = express(); // Start up an instance of app
 const port = 8080; // Port for the server to listen at
 
-const server = app.listen(port, ()=>{
+const server = app.listen(port, () => {
   console.log(`Running on "localhost:${port}"`);
-  console.log(`API Key: ${apiKey}`);
 });
 
 let projectData = [];
@@ -35,25 +34,48 @@ let lastEntry;
 
 function configureApp() {
   //Configure App Instance
-  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.urlencoded({
+    extended: false
+  }));
   app.use(bodyParser.json());
   app.use(cors());
 
   // Initialize the Application Project folder
   app.use(express.static('website'));
+
+}
+
+function calculateF2C(tempInF) {
+  return Math.round((tempInF - 32) * 5/9);
+}
+
+function getTempDataInC(tempDataInF) {
+    let tempDataInC = {};
+
+    tempDataInC.temp = calculateF2C(tempDataInF.temp);
+    tempDataInC.feels_like = calculateF2C(tempDataInF.feels_like);
+    tempDataInC.temp_min = calculateF2C(tempDataInF.temp_min);
+    tempDataInC.temp_max = calculateF2C(tempDataInF.temp_max);
+
+    return tempDataInC
 }
 
 async function processRequest(data) {
-  console.log("URL: " + baseURL+byZip+data.zip+also+inF+also+apiKeyQ+apiKey);
-  const response = await fetch(baseURL+byZip+data.zip+also+inF+also+apiKeyQ+apiKey);
+  console.log("URL: " + baseURL + byZip + data.zip + also + inF + also + apiKeyQ + apiKey);
+  const response = await fetch(baseURL + byZip + data.zip + also + inF + also + apiKeyQ + apiKey);
 
   try {
     const json = await response.json();
+    json.zip = data.zip;
     json.feelings = data.feelings;
+
+    if(json.cod == 200) {
+      json.tempInC = getTempDataInC(json.main);
+    }
+
     lastEntry = json;
     return json;
-  }
-  catch(error) {
+  } catch (error) {
     console.log("Error: \n", error);
   }
 }
@@ -62,18 +84,29 @@ function serverMain() {
   // Configure App
   configureApp();
 
-  app.get('/all', (req, res)=>{
-    console.log("Returning: ");
-    console.log(lastEntry);
+  app.get('/all', (req, res) => {
+    console.log("Sending last journal entry");
     res.send(lastEntry);
   });
 
-  app.post('/entry', async (req, res)=>{
-    console.log("Processing: ");
+  app.post('/entry', async (req, res) => {
+    console.log("Processing the Journal entry received.");
     console.log(req.body);
     reqData = await processRequest(req.body)
-    projectData.push(reqData);
-    res.send({msg: 'POST received'});
+
+    // Log the Journal Entry only when Zipcode is valid
+    if(reqData.cod != 200) {
+      console.log("Something went wrong, discarding this Journal entry!");
+      console.log("Error: \n" + JSON.stringify(reqData));
+      console.log(`Number of successful Journal entries made so far in this server session: ${projectData.length}`);
+    } else {
+      projectData.push(reqData);
+      console.log(`Saved new Journal entry successfully for this server session.`);
+    }
+
+    res.send({
+      msg: 'POST received'
+    });
   });
 
 }

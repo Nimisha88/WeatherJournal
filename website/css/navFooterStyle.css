@@ -2,7 +2,9 @@
 
 #navigation {
   /* border: 2px solid blue; */
-  background-image: url('../image/teal-clouds.jpeg');
+  background-image: -webkit-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+  background-image: -o-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+  background-image: linear-gradient(to top, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,8 +40,11 @@
 .navbar {
   grid-area: 1/span 8;
   margin-top: 3rem;
-  background-color: #f8f3d4;
-  color: #00b8a9;
+  background-image: -webkit-linear-gradient(left, #34495e55, #34495e, #34495e55);
+  background-image: -o-linear-gradient(left, #34495e55, #34495e, #34495e55);
+  background-image: linear-gradient(to right, #34495e55, #34495e, #34495e55);
+  color: #ecf0f1;
+  text-shadow: 1px 1px 20px #ecf0f1ee;
   /* border: 2px solid red; */
 }
 
@@ -52,12 +57,15 @@
 
 .copyright {
   flex: 0 1 20vh;
-  background-color: #f8f3d4;
-  color: #00b8a9;
+  background-image: -webkit-linear-gradient(#34495ecc, #34495e, #34495ecc);
+  background-image: -o-linear-gradient(#34495ecc, #34495e, #34495ecc);
+  background-image: linear-gradient(#34495ecc, #34495e, #34495ecc);
+  color: #ecf0f1;
+  text-shadow: 1px 1px 10px #ecf0f1ee;
 }
 
 .copyright p {
   margin: 0;
-  padding: 1.5%;
+  padding: 2%;
   font-size: 0.85rem;
 }

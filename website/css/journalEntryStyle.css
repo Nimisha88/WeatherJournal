@@ -1,0 +1,105 @@
+/* .ui {
+  display: none;
+}
+
+.wj-entry {
+  display: inline;
+} */
+
+.wj-entry {
+  grid-column: 2/span 6;
+  grid-row: 2/span 3;
+  padding: 2rem;
+  color: #34495ebb;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 100px 0 #ecf0f1;
+  -moz-box-shadow: 1px 1px 100px 0 #ecf0f1;
+  box-shadow: 1px 1px 100px 0 #ecf0f1;
+  background-image: -webkit-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  -webkit-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
+  background-image: -o-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  -o-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
+  background-image: linear-gradient(to bottom right, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  linear-gradient(to top, #f1c40f55, #ecf0f155, #f1c40f55);
+}
+
+.entry-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, minmax(5vh, auto));
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* border: 1px solid blue; */
+}
+
+.api-temp {
+  grid-column: 1/span 8;
+  grid-row: 1/span 1;
+}
+
+.api-date {
+  grid-column: 1/span 8;
+  grid-row: 2/span 1;
+}
+
+.ui-feel {
+  grid-column: 1/span 8;
+  grid-row: 3/span 1;
+}
+
+.ui-new-entry {
+  grid-column: 1/span 8;
+  grid-row: 4/span 1;
+  text-align: right;
+  /* border: 1px solid red; */
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+
+/* ************************************************************************** */
+/* *************************** Log Journal Button *************************** */
+/* ************************************************************************** */
+
+.btn-black {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   height: 0.5rem;
+   line-height: 0.5rem;
+   color: #34495ebb;
+   font-family: 'Expletus Sans', cursive;
+   width: auto;
+   font-size: 14px;
+   padding: 1rem;
+   background-color: #ecf0f177;
+   -webkit-box-shadow: 1px 1px 20px 0 #34495e33;
+   -moz-box-shadow: 1px 1px 20px 0 #34495e33;
+   box-shadow: 1px 1px 20px 0 #34495e33;
+   text-shadow: 1px 1px 20px #f1c40f;
+   border: solid #34495e33 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn-black:hover {
+   background: #34495ebb;
+   color: #ecf0f1;
+   text-shadow: 1px 1px 20px #f1c40f;
+   border: solid #f1c40f99 1px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}

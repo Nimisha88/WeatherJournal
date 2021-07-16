@@ -4,12 +4,6 @@
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 
-const baseURL = 'api.openweathermap.org/data/2.5/weather?';
-const byZip = 'zip='; //Searches US by Default
-const inC = 'units=metric';
-const inF = 'units=imperial';
-const apiKeyQ = 'appid=';
-
 const zipCode = document.getElementById("zip");
 const userFeelings = document.getElementById("feelings");
 const submitButton = document.getElementById("generate");
@@ -21,7 +15,6 @@ const journalEntry = document.querySelector(".wj-entry");
 const newEntryButton = document.getElementById("new-entry");
 
 let displayData = [];
-let apiKey;
 
 async function postAsync(url='', data={}) {
   const response = await fetch(url, {
@@ -61,6 +54,13 @@ function UserEntry(zip, feelings) {
   this.feelings = feelings;
 }
 
+function displayDate() {
+  if (displayData.cod == 200) {
+    date.getElementsByTagName('h3')[0].textContent = (new Date(displayData.dt)).toGMTString();
+    date.getElementsByTagName('p')[0].textContent = `${displayData.name}, ${displayData.zip}`;
+  }
+}
+
 async function executePostRequest() {
   let data;
   postAsync('/entry', new UserEntry(zipCode.value, userFeelings.value))
@@ -69,18 +69,21 @@ async function executePostRequest() {
     })
     .then((json)=>{
       console.log(displayData);
+      displayDate();
     });
 }
 
 submitButton.addEventListener("click", ()=>{
   executePostRequest();
-  userInput.style.display = "none";
-  journalEntry.style.display = "inline";
+  userInput.style.display = 'none';
+  journalEntry.style.display = 'inline';
 });
 
 newEntryButton.addEventListener("click", ()=>{
-  journalEntry.style.display = "none";
-  userInput.style.display = "inline";
+  journalEntry.style.display = 'none';
+  userInput.style.display = 'block';
+  zipCode.value = '';
+  userFeelings.value = '';
 });
 
 // ----------------------------------------------------------------------------

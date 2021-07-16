@@ -1,20 +1,27 @@
 @import "navFooterStyle.css";
 @import "contentStyle.css";
+@import "journalEntryStyle.css";
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 400;
+  font-family: 'Averia Sans Libre', cursive;
   margin: 0;
   text-align: center;
-  height: 100vh;
-  min-height: 676px;
+  height: calc(100vh - 4rem);
+  min-height: 575px;
+  background-color: #f1c40f33;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Expletus Sans', cursive;
 }
 
-/* Color Palette */
+
+/* ************************************************************************** */
+/* ****************************** Color Palette ***************************** */
+/* ************************************************************************** */
+
 /* #e8505b, #f9d56e, #f3ecc2, #14b1ab */
 /* #f6f4f6, #fddb3a, #52575d, #414444b */
 /* #00b8a9, #f8f3d4, #f6416c, #ffde7d */
+/* #ffc93c, #07689f, #40a8c4, #a2d5f2 */
+/* #f1c40f, #3498db, #34495e, #ecf0f1 */
