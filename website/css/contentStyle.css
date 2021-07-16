@@ -23,21 +23,16 @@
   grid-column: 2/span 6;
   grid-row: 2/span 3;
   padding: 2rem;
-  color: #3498db;
+  color: #f6416cbb;
   text-align: left;
   font-size: 16px;
   border-radius: 10px;
-  -webkit-box-shadow: 1px 1px 100px 0 #ecf0f1;
-  -moz-box-shadow: 1px 1px 100px 0 #ecf0f1;
-  box-shadow: 1px 1px 100px 0 #ecf0f1;
-  /* background-image: radial-gradient(#f1c40f33, #34495e33, #f1c40f33); */
-  /* background-image: radial-gradient(#f1c40f55, #3498db33, #f1c40f55); */
-  background-image: -webkit-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
-  -webkit-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
-  background-image: -o-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
-  -o-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
-  background-image: linear-gradient(to bottom right, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
-  linear-gradient(to top, #f1c40f55, #ecf0f155, #f1c40f55);
+  -webkit-box-shadow: 1px 1px 100px 0 #f8f3d4;
+  -moz-box-shadow: 1px 1px 100px 0 #f8f3d4;
+  box-shadow: 1px 1px 100px 0 #f8f3d4;
+  background-image: radial-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd), -webkit-linear-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd);
+  background-image: radial-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd), -o-linear-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd);
+  background-image: radial-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd), linear-gradient(#ffde7ddd, #f8f3d4dd, #ffde7ddd);
 }
 
 .ui-zip, .ui-feelings {
@@ -55,19 +50,19 @@
   border: none;
   font-size: 14px;
   border-radius: 7px;
-  background-color: #ecf0f177;
-  color: #3498dbdd;
+  background-color: #f8f3d4ee;
+  color: #f6416c99;
   resize: none;
   outline: none;
-  -webkit-box-shadow: 1px 1px 10px 0 #34495e33;
-  -moz-box-shadow: 1px 1px 10px 0 #34495e33;
-  box-shadow: 1px 1px 10px 0 #34495e33;
+  -webkit-box-shadow: 1px 1px 10px 0 #ffde7daa;
+  -moz-box-shadow: 1px 1px 10px 0 #ffde7daa;
+  box-shadow: 1px 1px 10px 0 #ffde7daa;
 }
 
 label {
   display: block;
   font-size: 16px;
-  text-shadow: 1px 1px 20px #ecf0f1;
+  text-shadow: 1px 1px 20px #ffde7daa;
 }
 
 textarea {
@@ -80,20 +75,20 @@ textarea {
 /* ************************************************************************** */
 
 ::placeholder {
-  color: #3498db66;
-  text-shadow: 1px 1px 20px #f1c40fdd;
+  color: #f6416c55;
+  text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: #3498db66;
-  text-shadow: 1px 1px 20px #ecf0f1;
+  color: #f6416c55;
+  text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: #3498db66;
-  text-shadow: 1px 1px 20px #ecf0f1;
+  color: #f6416c55;
+  text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
 
@@ -117,36 +112,95 @@ input[type=number] {
 /* *************************** Log Journal Button *************************** */
 /* ************************************************************************** */
 
-.btn {
+.btn-pink {
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
    height: 0.5rem;
    line-height: 0.5rem;
-   color: #3498db;
+   color: #f6416cbb;
    font-family: 'Expletus Sans', cursive;
    width: auto;
    font-size: 14px;
    padding: 1rem;
-   background-color: #ecf0f177;
-   -webkit-box-shadow: 1px 1px 20px 0 #34495e33;
-   -moz-box-shadow: 1px 1px 20px 0 #34495e33;
-   box-shadow: 1px 1px 20px 0 #34495e33;
-   text-shadow: 1px 1px 20px #f1c40f;
-   border: solid #34495e33 1px;
+   background-color: #f8f3d4;
+   -webkit-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   -moz-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   box-shadow: 1px 1px 20px 0 #ffde7daa;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
    text-decoration: none;
    display: inline-block;
    cursor: pointer;
    text-align: center;
 }
 
-.btn:hover {
-   background: #3498db;
-   color: #ecf0f1;
-   text-shadow: 1px 1px 20px #f1c40f;
-   border: solid #f1c40f99 1px;
+.btn-pink:hover {
+   background: #f6416cbb;
+   color: #f8f3d4;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
    text-decoration: none;
 }
+
+
+
+
+
+/* ************************************************************************** */
+/* ********* For Color Palette: #f1c40f, #3498db, #34495e, #ecf0f1 ********** */
+/* ************************************************************************** */
+
+/* .ui, .wj-entry {
+  color: #3498db;
+  background-image: -webkit-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  -webkit-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
+  background-image: -o-linear-gradient(top left, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  -o-linear-gradient(bottom, #f1c40f55, #ecf0f155, #f1c40f55);
+  background-image: linear-gradient(to bottom right, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33, #ecf0f155, #f1c40f33),
+  linear-gradient(to top, #f1c40f55, #ecf0f155, #f1c40f55);
+} */
+
+/* .ui-zip input, .ui-feelings textarea {
+  background-color: #ecf0f177;
+  color: #3498dbdd;
+  -webkit-box-shadow: 1px 1px 10px 0 #34495e33;
+  -moz-box-shadow: 1px 1px 10px 0 #34495e33;
+  box-shadow: 1px 1px 10px 0 #34495e33;
+} */
+
+/* ::placeholder {
+  color: #3498db66;
+  text-shadow: 1px 1px 20px #f1c40fdd;
+  font-family: 'Averia Sans Libre', cursive;
+}
+:-ms-input-placeholder {
+  color: #3498db66;
+  text-shadow: 1px 1px 20px #ecf0f1;
+  font-family: 'Averia Sans Libre', cursive;
+}
+::-ms-input-placeholder {
+  color: #3498db66;
+  text-shadow: 1px 1px 20px #ecf0f1;
+  font-family: 'Averia Sans Libre', cursive;
+} */
+
+
+/* .btn-blue {
+  color: #3498db;
+  background-color: #ecf0f177;
+  -webkit-box-shadow: 1px 1px 20px 0 #34495e33;
+  -moz-box-shadow: 1px 1px 20px 0 #34495e33;
+  box-shadow: 1px 1px 20px 0 #34495e33;
+  text-shadow: 1px 1px 20px #f1c40f;
+  border: solid #34495e33 1px;
+}
+.btn-blue:hover {
+  background: #3498db;
+  color: #ecf0f1;
+  text-shadow: 1px 1px 20px #f1c40f;
+  border: solid #f1c40f99 1px;
+} */

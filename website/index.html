@@ -6,7 +6,7 @@
   <title>Weather Journal</title>
 
   <!-- Add Icon -->
-  <link rel="icon" href="./image/logo.png">
+  <link rel="icon" href="./image/teal-logo.png">
 
   <!-- Add Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Expletus+Sans&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
   <header id="navigation" class="container">
     <div class="nav">
       <div class="logo">
-        <img src="./image/logo.png" alt="App Logo" width="20%">
+        <img src="./image/teal-logo.png" alt="App Logo" width="20%">
       </div>
       <div class="navbar">
         <h2>Weather Journal</h2>
@@ -41,26 +41,51 @@
           </div>
           <div class="ui-feelings">
             <label for="feelings">How are you feeling today?</label>
-            <textarea class="myInput" id="feelings" placeholder="Please enter your feelings here." rows="9" cols="50"></textarea>
+            <textarea id="feelings" placeholder="Please enter your feelings here."></textarea>
           </div>
           <div class="ui-generate">
-            <a href="#navigation" id="generate" class="btn">Log Journal Entry</a>
+            <a href="#navigation" id="generate" class="btn-pink">Log Journal Entry</a>
           </div>
         </span>
         <span class="wj-entry">
           <div class="entry-container">
-            <div class="api-temp" id="temp">
-              Temperature
+            <div class="wi" id="wi">
+              <i class="fas fa-cloud-sun-rain fa-3x"></i>
             </div>
-            <div class="api-date" id="date">
+            <div class="api-temp" id="temp">
+              <span></span>
+            </div>
+            <div class="api-other">
+              <div class="feels-like">
+                <span class="api-other-title">Feels Like: </span><span class="api-other-desc"></span>
+              </div>
+              <div class="humidity bt-1by2">
+                <span class="api-other-title">Humidity: </span><span class="api-other-desc"></span>
+              </div>
+              <div class="wind bt-1by2">
+                <span class="api-other-title">Wind: </span><span class="api-other-desc"></span>
+              </div>
+            </div>
+            <div class="do-nothing">
+              ..........
+            </div>
+            <div class="sun-times">
+              <div class="sunrise">
+                <span class="sun-title">Sunrise: </span><span class="sun-desc"></span>
+              </div>
+              <div class="sunset bt-1by2">
+                <span class="sun-title">Sunset: </span><span class="sun-desc"></span>
+              </div>
+            </div>
+            <div class="api-date bt-1by2" id="date">
               <h3 class="mb-0"></h3>
               <p class="mt-0"></p>
             </div>
-            <div class="ui-feel" id="content">
-              User Feelings
+            <div class="ui-feel bt-1by2" id="content">
+              <p></p>
             </div>
             <div class="ui-new-entry">
-              <a href="#navigation" id="new-entry" class="btn-black">New Entry?</a>
+              <a href="#navigation" id="new-entry" class="btn-teal">New Entry?</a>
             </div>
           </div>
         </span>

@@ -1,10 +1,7 @@
 /* Navigation Styling */
 
 #navigation {
-  /* border: 2px solid blue; */
-  background-image: -webkit-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
-  background-image: -o-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
-  background-image: linear-gradient(to top, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+  background-image: url('../image/teal-clouds.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,7 +21,6 @@
   align-items: center;
   justify-content: center;
   grid-gap: 1%;
-  /* border: 2px solid blue; */
 }
 
 .logo {
@@ -34,18 +30,17 @@
   top: 3%;
   left: 2%;
   border-radius: 50%;
-  /* border: 2px solid red; */
 }
 
 .navbar {
   grid-area: 1/span 8;
   margin-top: 3rem;
-  background-image: -webkit-linear-gradient(left, #34495e55, #34495e, #34495e55);
-  background-image: -o-linear-gradient(left, #34495e55, #34495e, #34495e55);
-  background-image: linear-gradient(to right, #34495e55, #34495e, #34495e55);
-  color: #ecf0f1;
-  text-shadow: 1px 1px 20px #ecf0f1ee;
-  /* border: 2px solid red; */
+  background-image: -webkit-linear-gradient(left, #00b8a900, #00b8a9, #00b8a933);
+  background-image: -o-linear-gradient(left, #00b8a900, #00b8a9, #00b8a933);
+  background-image: linear-gradient(to right, #00b8a900, #00b8a9, #00b8a933);
+
+  color: #f8f3d4;
+  text-shadow: 1px 1px 20px #f8f3d4;
 }
 
 .navbar h2 {
@@ -57,11 +52,11 @@
 
 .copyright {
   flex: 0 1 20vh;
-  background-image: -webkit-linear-gradient(#34495ecc, #34495e, #34495ecc);
-  background-image: -o-linear-gradient(#34495ecc, #34495e, #34495ecc);
-  background-image: linear-gradient(#34495ecc, #34495e, #34495ecc);
-  color: #ecf0f1;
-  text-shadow: 1px 1px 10px #ecf0f1ee;
+  background-image: -webkit-linear-gradient(#00b8a988, #00b8a9dd, #00b8a999);
+  background-image: -o-linear-gradient(#00b8a988, #00b8a9dd, #00b8a999);
+  background-image: linear-gradient(#00b8a988, #00b8a9dd, #00b8a999);
+  color: #f8f3d4;
+  text-shadow: 1px 1px 20px #f8f3d4;
 }
 
 .copyright p {
@@ -69,3 +64,33 @@
   padding: 2%;
   font-size: 0.85rem;
 }
+
+
+
+
+
+/* ************************************************************************** */
+/* ********* For Color Palette: #f1c40f, #3498db, #34495e, #ecf0f1 ********** */
+/* ************************************************************************** */
+
+/* #navigation {
+  background-image: -webkit-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+  background-image: -o-linear-gradient(bottom, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+  background-image: linear-gradient(to top, #ecf0f100, #ecf0f1aa), url('../image/yellow-clouds.jpeg');
+} */
+
+/* .navbar {
+  background-image: -webkit-linear-gradient(left, #34495e55, #34495e, #34495e55);
+  background-image: -o-linear-gradient(left, #34495e55, #34495e, #34495e55);
+  background-image: linear-gradient(to right, #34495e55, #34495e, #34495e55);
+  color: #ecf0f1;
+  text-shadow: 1px 1px 20px #ecf0f1ee;
+} */
+
+/* .copyright {
+  background-image: -webkit-linear-gradient(#34495ecc, #34495e, #34495ecc);
+  background-image: -o-linear-gradient(#34495ecc, #34495e, #34495ecc);
+  background-image: linear-gradient(#34495ecc, #34495e, #34495ecc);
+  color: #ecf0f1;
+  text-shadow: 1px 1px 10px #ecf0f1ee;
+} */

@@ -8,7 +8,8 @@ body {
   text-align: center;
   height: calc(100vh - 4rem);
   min-height: 575px;
-  background-color: #f1c40f33;
+  /* background-color: #f1c40f33; */
+  background-color: #00b8a933;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +23,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #e8505b, #f9d56e, #f3ecc2, #14b1ab */
 /* #f6f4f6, #fddb3a, #52575d, #414444b */
-/* #00b8a9, #f8f3d4, #f6416c, #ffde7d */
 /* #ffc93c, #07689f, #40a8c4, #a2d5f2 */
+/* #00b8a9, #f8f3d4, #f6416c, #ffde7d */
 /* #f1c40f, #3498db, #34495e, #ecf0f1 */
