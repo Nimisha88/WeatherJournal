@@ -90,9 +90,13 @@ async function executePostRequest() {
 }
 
 submitButton.addEventListener("click", () => {
-  executePostRequest();
-  userInput.style.display = 'none';
-  journalEntry.style.display = 'block';
+  if ((zipCode.value == "") || (userFeelings.value.trim() == "")) {
+    alert("Both inputs are required to log the Journal Entry. Please try again!");
+  } else {
+    executePostRequest();
+    userInput.style.display = 'none';
+    journalEntry.style.display = 'block';
+  }
 });
 
 newEntryButton.addEventListener("click", () => {
@@ -261,6 +265,11 @@ function displayDate() {
 
 function displayUserFeelings() {
   if (displayData.cod == 200) {
-    content.getElementsByTagName('p')[0].textContent = displayData.feelings;
+    let feelingsHTML = displayData.feelings.replace(/well|fine|great|good|nice|happy|love|excited|surprised|satisfied|fortunate|thankful|energetic|content|peaceful|hopeful|joyous|proud|optimistic|glad|pleased|elated|thrilled|amused|ill|sick|sad|lonely|anxious|sad|bad|angry|hate|gloomy|depressing|irritated|mad|cheated|offended|disturbed|annoyed|worried|nervous|stressed|lost|troubled|miserable|hopeless|disappointed|heartbroken|low|frustrated|betrayed|upset|embarrassed|furious|tired|curious|warm|hot|cold|uncomfortable|confused|bound|relieved|relaxed|free|sympathetic|comfortable|free|peaceful|refreshed|determined|motivated|grateful|confident|inspired/gi, function (emoWord) {
+      console.log("InEmoWordFn");
+      return `<span class="emo-word">${emoWord}</span>`;
+    });
+    console.log("After: " + feelingsHTML);
+    content.getElementsByTagName('p')[0].innerHTML = feelingsHTML;
   }
 }

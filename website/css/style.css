@@ -1,6 +1,7 @@
 @import "navFooterStyle.css";
 @import "contentStyle.css";
 @import "journalEntryStyle.css";
+@import "mediaStyle.css";
 
 /* ************************************************************************** */
 /* ****************************** Color Palette ***************************** */
@@ -20,8 +21,8 @@ body {
   text-align: center;
   height: calc(100vh - 4rem);
   min-height: 575px;
-  /* background-color: #f1c40f33; */
-  background-color: #00b8a933;
+  background-image: url(../image/teal-clouds.jpeg);
+  background-size: cover;
 }
 
 /* Headers default Styles */

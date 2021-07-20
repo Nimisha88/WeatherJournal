@@ -126,6 +126,10 @@ a.inactive-temp:hover {
   font-style: oblique;
 }
 
+.emo-word {
+  color: #f6416caa;
+}
+
 /* New Entry Button */
 .ui-new-entry {
   grid-column: 1/span 8;
