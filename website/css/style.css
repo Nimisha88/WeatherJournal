@@ -2,6 +2,18 @@
 @import "contentStyle.css";
 @import "journalEntryStyle.css";
 
+/* ************************************************************************** */
+/* ****************************** Color Palette ***************************** */
+/* ************************************************************************** */
+
+/* #00b8a9, #f8f3d4, #f6416c, #ffde7d */
+
+
+/* ************************************************************************** */
+/* **************************** Generic Styles ****************************** */
+/* ************************************************************************** */
+
+/* Body default Styles */
 body {
   font-family: 'Averia Sans Libre', cursive;
   margin: 0;
@@ -12,17 +24,100 @@ body {
   background-color: #00b8a933;
 }
 
+/* Headers default Styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Expletus Sans', cursive;
 }
 
+/* Margin Bottom none */
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/* Margin Top none */
+.mt-0 {
+  margin-top: 0;
+}
+
+/* Border Top 0.5px */
+.bt-1by2 {
+  border-top: 0.5px solid #f6416c33;
+}
+
 
 /* ************************************************************************** */
-/* ****************************** Color Palette ***************************** */
+/* ******************************* Teal Button ****************************** */
 /* ************************************************************************** */
 
-/* #e8505b, #f9d56e, #f3ecc2, #14b1ab */
-/* #f6f4f6, #fddb3a, #52575d, #414444b */
-/* #ffc93c, #07689f, #40a8c4, #a2d5f2 */
-/* #00b8a9, #f8f3d4, #f6416c, #ffde7d */
-/* #f1c40f, #3498db, #34495e, #ecf0f1 */
+.btn-teal {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   height: 0.5rem;
+   line-height: 0.5rem;
+   color: #00b8a9;
+   font-family: 'Expletus Sans', cursive;
+   width: auto;
+   font-size: 14px;
+   padding: 1rem;
+   background-color: #f8f3d4;
+   -webkit-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   -moz-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   box-shadow: 1px 1px 20px 0 #ffde7daa;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn-teal:hover {
+   background: #00b8a9dd;
+   color: #f8f3d4;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+
+
+/* ************************************************************************** */
+/* ******************************* Pink Button ****************************** */
+/* ************************************************************************** */
+
+.btn-pink {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   height: 0.5rem;
+   line-height: 0.5rem;
+   color: #f6416cbb;
+   font-family: 'Expletus Sans', cursive;
+   width: auto;
+   font-size: 14px;
+   padding: 1rem;
+   background-color: #f8f3d4;
+   -webkit-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   -moz-box-shadow: 1px 1px 20px 0 #ffde7daa;
+   box-shadow: 1px 1px 20px 0 #ffde7daa;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn-pink:hover {
+   background: #f6416cbb;
+   color: #f8f3d4;
+   text-shadow: 1px 1px 20px #ffde7daa;
+   border: solid #ffde7daa 1px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}

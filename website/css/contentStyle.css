@@ -51,7 +51,8 @@
   font-size: 14px;
   border-radius: 7px;
   background-color: #f8f3d4ee;
-  color: #f6416c99;
+  /* color: #f6416c99; */
+  color: #00b8a9dd;
   resize: none;
   outline: none;
   -webkit-box-shadow: 1px 1px 10px 0 #ffde7daa;
@@ -75,19 +76,22 @@ textarea {
 /* ************************************************************************** */
 
 ::placeholder {
-  color: #f6416c55;
+  /* color: #f6416c55; */
+  color: #00b8a955;
   text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: #f6416c55;
+  /* color: #f6416c55; */
+  color: #00b8a955;
   text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: #f6416c55;
+  /* color: #f6416c55; */
+  color: #00b8a955;
   text-shadow: 1px 1px 20px #ffde7daa;
   font-family: 'Averia Sans Libre', cursive;
 }
@@ -106,48 +110,6 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-
-
-/* ************************************************************************** */
-/* *************************** Log Journal Button *************************** */
-/* ************************************************************************** */
-
-.btn-pink {
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   height: 0.5rem;
-   line-height: 0.5rem;
-   color: #f6416cbb;
-   font-family: 'Expletus Sans', cursive;
-   width: auto;
-   font-size: 14px;
-   padding: 1rem;
-   background-color: #f8f3d4;
-   -webkit-box-shadow: 1px 1px 20px 0 #ffde7daa;
-   -moz-box-shadow: 1px 1px 20px 0 #ffde7daa;
-   box-shadow: 1px 1px 20px 0 #ffde7daa;
-   text-shadow: 1px 1px 20px #ffde7daa;
-   border: solid #ffde7daa 1px;
-   text-decoration: none;
-   display: inline-block;
-   cursor: pointer;
-   text-align: center;
-}
-
-.btn-pink:hover {
-   background: #f6416cbb;
-   color: #f8f3d4;
-   text-shadow: 1px 1px 20px #ffde7daa;
-   border: solid #ffde7daa 1px;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   text-decoration: none;
-}
-
-
-
 
 
 /* ************************************************************************** */

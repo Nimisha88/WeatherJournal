@@ -6,6 +6,7 @@
   display: block;
 } */
 
+/* Styles for the Entry Container */
 .wj-entry {
   grid-column: 2/span 6;
   grid-row: 2/span 3;
@@ -31,13 +32,15 @@
   height: 100%;
 }
 
+/* Icon Styling */
 .wi {
   grid-column: 1/span 1;
   grid-row: 1/span 1;
-  text-align: center;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
+  color: #f6416caa;
 }
 
+/* Temp Styling */
 .api-temp {
   grid-column: 2/span 1;
   grid-row: 1/span 1;
@@ -71,12 +74,7 @@ a.inactive-temp:hover {
   color: #f8f3d4;
 }
 
-/* .ForC {
-  grid-column: 3/span 1;
-  grid-row: 1/span 1;
-  text-align: center;
-} */
-
+/* Feels like, Humidity and Wind info */
 .api-other {
   grid-column: 3/span 1;
   grid-row: 1/span 1;
@@ -87,6 +85,7 @@ a.inactive-temp:hover {
   /* margin-left: 1rem; */
 }
 
+/* Empty space */
 .do-nothing {
   grid-column: 4/span 4;
   grid-row: 1/span 1;
@@ -97,6 +96,7 @@ a.inactive-temp:hover {
   color: #00b8a977;
 }
 
+/* Sun rise/set related info */
 .sun-times {
   grid-column: 8/span 1;
   grid-row: 1/span 1;
@@ -106,19 +106,27 @@ a.inactive-temp:hover {
   align-items: center;
 }
 
+/* Styling for Date section */
 .api-date {
   grid-column: 1/span 8;
   grid-row: 2/span 1;
   /* border-top: 0.5px solid #f6416c33; */
 }
 
+.api-date p {
+  grid-column: 1/span 8;
+  grid-row: 2/span 1;
+  color: #f6416caa;
+}
+
+/* User's feelings section styling */
 .ui-feel {
   grid-column: 1/span 8;
   grid-row: 3/span 1;
-  /* border-top: 0.5px solid #f6416c33; */
   font-style: oblique;
 }
 
+/* New Entry Button */
 .ui-new-entry {
   grid-column: 1/span 8;
   grid-row: 4/span 1;
@@ -126,55 +134,6 @@ a.inactive-temp:hover {
   padding-top: 2rem;
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.bt-1by2 {
-  border-top: 0.5px solid #f6416c33;
-}
-
-/* ************************************************************************** */
-/* *************************** Log Journal Button *************************** */
-/* ************************************************************************** */
-
-.btn-teal {
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   height: 0.5rem;
-   line-height: 0.5rem;
-   color: #00b8a9;
-   font-family: 'Expletus Sans', cursive;
-   width: auto;
-   font-size: 14px;
-   padding: 1rem;
-   background-color: #f8f3d4;
-   -webkit-box-shadow: 1px 1px 20px 0 #ffde7daa;
-   -moz-box-shadow: 1px 1px 20px 0 #ffde7daa;
-   box-shadow: 1px 1px 20px 0 #ffde7daa;
-   text-shadow: 1px 1px 20px #ffde7daa;
-   border: solid #ffde7daa 1px;
-   text-decoration: none;
-   display: inline-block;
-   cursor: pointer;
-   text-align: center;
-}
-
-.btn-teal:hover {
-   background: #00b8a9dd;
-   color: #f8f3d4;
-   text-shadow: 1px 1px 20px #ffde7daa;
-   border: solid #ffde7daa 1px;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   text-decoration: none;
-}
 
 /* ************************************************************************** */
 /* ********* For Color Palette: #f1c40f, #3498db, #34495e, #ecf0f1 ********** */
