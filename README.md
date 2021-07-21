@@ -18,8 +18,8 @@ An asynchronous web application that uses [OpenWeatherMap](https://openweatherma
 ## Installation instructions
 
 * Install [NodeJS](https://nodejs.org/)
-* Install NodeJS packages using following command lines: ```
-npm install express
+* Install NodeJS packages using following command lines:
+```npm install express
 npm install body-parser
 npm install cors
 install node-fetch
@@ -47,7 +47,7 @@ npm install dotenv
 
 ## Application Preview
 
-
+https://user-images.githubusercontent.com/29170466/126427766-3c917d62-a844-4e9d-9028-31312212eb0d.mov
 
 
 ## Highlights
