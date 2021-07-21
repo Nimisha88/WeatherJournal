@@ -1,6 +1,10 @@
 # WeatherJournal
 An asynchronous web application that uses [OpenWeatherMap](https://openweathermap.org/) API data to display current weather of a given location along with the user input of how the user is feeling presently.
 
+## Application Preview
+
+https://user-images.githubusercontent.com/29170466/126427766-3c917d62-a844-4e9d-9028-31312212eb0d.mov
+
 
 ## Software, Firmware and Hardware
 
@@ -44,11 +48,6 @@ npm install dotenv
     * image - Folder containing all images used in the application
     * app.js - Client side scripting
     * index.html - Landing page of the application
-
-
-## Application Preview
-
-https://user-images.githubusercontent.com/29170466/126427766-3c917d62-a844-4e9d-9028-31312212eb0d.mov
 
 
 ## Highlights
