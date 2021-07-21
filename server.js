@@ -3,6 +3,7 @@
 // Global Constants and Variables
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
+
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
 const byZip = 'zip='; //Searches US by Default
 const also = '&';
@@ -28,8 +29,17 @@ const server = app.listen(port, () => {
 let projectData = [];
 let lastEntry;
 
+
+// ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 // Functions
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+// Configue App instance
+// ----------------------------------------------------------------------------
+// configureApp() - Initialise app to use body-parser and cors
 // ----------------------------------------------------------------------------
 
 function configureApp() {
@@ -44,6 +54,15 @@ function configureApp() {
   app.use(express.static('website'));
 
 }
+
+
+// ----------------------------------------------------------------------------
+// Process Client Request recieved
+// ----------------------------------------------------------------------------
+// calculateF2C(tempInF) - Take temp in F and returns temp in C
+// getTempDataInC(tempDataInF) - Take all temps in F and Return all temps in C
+// processRequest(data) - Make an API call based on Request data
+// ----------------------------------------------------------------------------
 
 function calculateF2C(tempInF) {
   return Math.round((tempInF - 32) * 5/9);
@@ -61,7 +80,6 @@ function getTempDataInC(tempDataInF) {
 }
 
 async function processRequest(data) {
-  console.log("URL: " + baseURL + byZip + data.zip + also + inF + also + apiKeyQ + apiKey);
   const response = await fetch(baseURL + byZip + data.zip + also + inF + also + apiKeyQ + apiKey);
 
   try {
@@ -80,8 +98,15 @@ async function processRequest(data) {
   }
 }
 
+
+// ----------------------------------------------------------------------------
+// Configure Server instance
+// ----------------------------------------------------------------------------
+// serverMain() - Configures all HTTP request Get/Post
+// ----------------------------------------------------------------------------
+
 function serverMain() {
-  // Configure App
+  // Configure App Instance
   configureApp();
 
   app.get('/all', (req, res) => {
@@ -91,7 +116,7 @@ function serverMain() {
 
   app.post('/entry', async (req, res) => {
     console.log("Processing the Journal entry received.");
-    console.log(req.body);
+    // console.log(req.body);
     reqData = await processRequest(req.body)
 
     // Log the Journal Entry only when Zipcode is valid

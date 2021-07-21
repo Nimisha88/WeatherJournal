@@ -17,17 +17,26 @@ const weatherIcon = document.getElementById("wi");
 const apiOtherData = document.querySelectorAll(".api-other-desc");
 const sunTimesData = document.querySelectorAll(".sun-desc");
 
-// const feelsLike = document.querySelector(".feels-like");
-// const humidity = document.querySelector(".humidity");
-// const wind = document.querySelector(".wind");
-
-
 const tempUnitHTML = '<sup><a id="inF" class="active-temp" href="#">°F</a>|<a id="inC" class="inactive-temp" href="#">°C</a></sup>';
 
 let displayData = [];
 let unitF;
 let unitC;
 let iconHTML;
+
+
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// Functions
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+// HTTP Get/Post request to Server
+// ----------------------------------------------------------------------------
+// postAsync(url = '', data = {}) - Post new Journal entry
+// getAsync(url = '') - Get dynamic data of Last Journal entry
+// ----------------------------------------------------------------------------
 
 async function postAsync(url = '', data = {}) {
   const response = await fetch(url, {
@@ -60,18 +69,18 @@ async function getAsync(url = '') {
   }
 }
 
+
+// ----------------------------------------------------------------------------
+// Process new User Journal Entry
+// ----------------------------------------------------------------------------
+// UserEntry(zip, feelings) - Journal Entry object with user input data
+// executePostRequest() - Post new User Journal Entry and display dynamic data
+// ----------------------------------------------------------------------------
+
 function UserEntry(zip, feelings) {
   this.zip = zip;
   this.feelings = feelings;
 }
-
-
-
-
-
-
-
-
 
 async function executePostRequest() {
   let data;
@@ -80,22 +89,34 @@ async function executePostRequest() {
       return getAsync('/all');
     })
     .then((json) => {
-      console.log(displayData);
-      displayWeatherIcon();
-      displayTemp();
-      displaySunTimes();
-      displayDate();
-      displayUserFeelings();
+      // console.log(displayData);
+      if (displayData.cod != 200) {
+        zipCode.value = '';
+        userFeelings.value = '';
+        console.log(`Error: ${JSON.stringify(displayData)}`);
+        alert(`Something went wrong. Please verify Zip Code and try again.`);
+      } else {
+        userInput.style.display = 'none';
+        journalEntry.style.display = 'block';
+        displayWeatherIcon();
+        displayTemp();
+        displaySunTimes();
+        displayDate();
+        displayUserFeelings();
+      }
     });
 }
+
+
+// ----------------------------------------------------------------------------
+// Add Event Listeners on "Log Journal Entry" and "New Entry?" buttons
+// ----------------------------------------------------------------------------
 
 submitButton.addEventListener("click", () => {
   if ((zipCode.value == "") || (userFeelings.value.trim() == "")) {
     alert("Both inputs are required to log the Journal Entry. Please try again!");
   } else {
     executePostRequest();
-    userInput.style.display = 'none';
-    journalEntry.style.display = 'block';
   }
 });
 
@@ -106,8 +127,9 @@ newEntryButton.addEventListener("click", () => {
   userFeelings.value = '';
 });
 
+
 // ----------------------------------------------------------------------------
-// Function to display Weather Icon
+// displayWeatherIcon() - Function to identify and display Weather Icon
 // ----------------------------------------------------------------------------
 
 function displayWeatherIcon() {
@@ -180,9 +202,15 @@ function displayWeatherIcon() {
   }
 }
 
+
 // ----------------------------------------------------------------------------
 // Function to display Weather details
-// Temp in F and C, Wind in mph and kph (imperial/metric)
+// ----------------------------------------------------------------------------
+// toggleTempUnitClassesOnClick() - Toggles betwen F and C as active
+// addTempUnitChangeListener() - Add Event Listener to F and C links
+// displayTemp() - Display Temp, FeelsLike, Humidity and Wind data
+// ----------------------------------------------------------------------------
+// Temp displays in F or C, Wind in mph or kph (imperial/metric) respectively
 // ----------------------------------------------------------------------------
 
 function toggleTempUnitClassesOnClick() {
@@ -202,7 +230,7 @@ function addTempUnitChangeListener() {
   });
   unitC.addEventListener('click', () => {
     temp.childNodes[0].textContent = Math.round(displayData.tempInC.temp);
-    apiOtherData[0].textContent = `${Math.round(displayData.main['feels_like'])}°`;
+    apiOtherData[0].textContent = `${Math.round(displayData.tempInC['feels_like'])}°`;
     apiOtherData[2].textContent = `${Math.round(displayData.wind.speed * 1.61)} kph`;
     toggleTempUnitClassesOnClick();
   });
@@ -224,8 +252,9 @@ function displayTemp() {
   }
 }
 
+
 // ----------------------------------------------------------------------------
-// Function to display Sun times
+// displaySunTimes() - Function to display Sun rise/set
 // ----------------------------------------------------------------------------
 
 function displaySunTimes() {
@@ -235,8 +264,13 @@ function displaySunTimes() {
   }
 }
 
+
 // ----------------------------------------------------------------------------
 // Function to display Date
+// ----------------------------------------------------------------------------
+// LocalDateAndTime(day, dt, time, tzone) - Local Date/Time object
+// getDateObject(isodt) - get Local Date object
+// displayDate() - Displays Date and Location
 // ----------------------------------------------------------------------------
 
 function LocalDateAndTime(day, dt, time, tzone) {
@@ -259,13 +293,15 @@ function displayDate() {
   }
 }
 
+
 // ----------------------------------------------------------------------------
-// Function to display User's Feelings
+// displayUserFeelings() - Function to display feelings entered by user
+// It highlights the common emotional words that expresses user's feelings
 // ----------------------------------------------------------------------------
 
 function displayUserFeelings() {
   if (displayData.cod == 200) {
-    let feelingsHTML = displayData.feelings.replace(/well|fine|great|good|nice|happy|love|excited|surprised|satisfied|fortunate|thankful|energetic|content|peaceful|hopeful|joyous|proud|optimistic|glad|pleased|elated|thrilled|amused|ill|sick|sad|lonely|anxious|sad|bad|angry|hate|gloomy|depressing|irritated|mad|cheated|offended|disturbed|annoyed|worried|nervous|stressed|lost|troubled|miserable|hopeless|disappointed|heartbroken|low|frustrated|betrayed|upset|embarrassed|furious|tired|curious|warm|hot|cold|uncomfortable|confused|bound|relieved|relaxed|free|sympathetic|comfortable|free|peaceful|refreshed|determined|motivated|grateful|confident|inspired/gi, function (emoWord) {
+    let feelingsHTML = displayData.feelings.replace(/well|fine|great|good|like|nice|happy|love|excited|surprised|satisfied|fortunate|thankful|energetic|content|peaceful|hopeful|joyous|proud|optimistic|glad|pleased|elated|thrilled|amused|sick|sad|despise|lonely|anxious|bad|angry|hate|gloomy|depressing|irritated|cheated|offended|disturbed|annoyed|worried|nervous|stressed|lost|troubled|miserable|hopeless|disappointed|heartbroken|frustrated|betrayed|upset|embarrassed|furious|tired|curious|warm|hot|cold|uncomfortable|confused|bound|relieved|relaxed|free|aware|sympathetic|comfortable|free|peaceful|refreshed|determined|motivated|grateful|confident|inspired/gi, function (emoWord) {
       console.log("InEmoWordFn");
       return `<span class="emo-word">${emoWord}</span>`;
     });
