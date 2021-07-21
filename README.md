@@ -27,7 +27,8 @@ npm install dotenv
 ```
 * Download the application locally
   * Obtain an APIKey at [OpenWeather](https://openweathermap.org/) by creating a free account.
-  * In the main application folder (containing server.js), create `.env` file and add your APIKey like `OpenWeatherAPIKey=your-api-key-here`
+  * In the main application folder (containing server.js), create `.env` file and add your APIKey like 
+  `OpenWeatherAPIKey=your-api-key-here`
   * On terminal, `cd` to the project folder containing `server.js` and initiate the local server by
   `node server.js`
 * On a web browser, initiate the application using url http://localhost:8080/
@@ -52,14 +53,14 @@ https://user-images.githubusercontent.com/29170466/126427766-3c917d62-a844-4e9d-
 
 ## Highlights
 
-* Identifies and display apt weather icon from a different source.
+* Identifies and displays apt weather icon from a different source.
 * Switches between Imperial/Metric system (F to C | mph to kph).
 * Highlights words that expresses user's feelings in the journal entry.
 
 
 ## Copyright
 
-The application is designed and developed by **Nimisha Viraj** as a part of [Udacity Front End Web Developer Nanodegree] (https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
+The application is designed and developed by **Nimisha Viraj** as a part of [Udacity Front End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
 
 
 ## Acknowledgements
@@ -72,5 +73,5 @@ The application is designed and developed by **Nimisha Viraj** as a part of [Uda
 
 ## Limitation and Scope
 
-* Words being highlighted as emo-words are limited to a few frequently used words used to express oneself.
-* Application is limited to US Zip codes only, can expand to cover all zip codes across the globe.
+* Words being highlighted as emo-words are limited to very few frequently used words used to express oneself.
+* Application is limited to US Zip codes only, can be expanded to cover zip codes across the globe.
